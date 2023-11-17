@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import BarChart from './BarChart';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch("https://raw.githubusercontent.com/freeCodeCamp/ProjectReferenceData/master/GDP-data.json")
+            .then(response => response.json())
+            .then(data => setData(data.data));
+    }, []);
+
+    return (
+      <div className="App">
+          <div className="container">
+              <h1 id="title">United States GDP</h1>
+              {data.length > 0 ? <BarChart data={data} /> : <p>Loading...</p>}
+              <h2 id="info">More Information: http://www.bea.gov/national/pdf/nipaguid.pdf</h2>
+          </div>
+      </div>
   );
 }
 
