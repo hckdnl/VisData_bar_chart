@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/VisData_bar_chart/static/css/main.5db256a2.css",
+    "main.js": "/VisData_bar_chart/static/js/main.4042c9f3.js",
+    "static/js/787.5602cc29.chunk.js": "/VisData_bar_chart/static/js/787.5602cc29.chunk.js",
+    "index.html": "/VisData_bar_chart/index.html",
+    "main.5db256a2.css.map": "/VisData_bar_chart/static/css/main.5db256a2.css.map",
+    "main.4042c9f3.js.map": "/VisData_bar_chart/static/js/main.4042c9f3.js.map",
+    "787.5602cc29.chunk.js.map": "/VisData_bar_chart/static/js/787.5602cc29.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5db256a2.css",
+    "static/js/main.4042c9f3.js"
+  ]
+}
